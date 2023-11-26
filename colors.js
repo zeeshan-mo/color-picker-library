@@ -1,4 +1,4 @@
-[
+const colors_json = [
     {
         "name": "Air Force Blue (Raf)",
         "hex": "#5d8aa8",
@@ -7785,3 +7785,5 @@
         ]
     }
 ]
+
+export default colors_json;

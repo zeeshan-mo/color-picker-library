@@ -1,5 +1,4 @@
-import fs from 'fs';
-var colors_json = JSON.parse(fs.readFileSync('./colors.json', 'utf8'));
+import colors_json from "./colors.js";
 
 function dist_3d(x1, y1, z1, x2, y2, z2) {
     // First calculate the distance on the 2d plane
