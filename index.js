@@ -10,16 +10,16 @@ function dist_3d(x1, y1, z1, x2, y2, z2) {
 function find_closest_color(r, g, b) {
     // Iterate through the list of colors performing distance checks until we get the closest
     var closest_dist = Infinity;
-    var closest_name = 'Undefined';
+    var closest_field = {"name":"undefined","hex":"#000000","rgb":[0,0,0]};
     
     for (var i = 0; i < colors_json.length; i++) {
         var dist = dist_3d(r, g, b, colors_json[i]['rgb'][0], colors_json[i]['rgb'][1], colors_json[i]['rgb'][2]);
         if (dist < closest_dist) {
             closest_dist = dist;
-            closest_name = colors_json[i]['name'];
+            closest_field = colors_json[i];
         }
     }
-    return closest_name;
+    return closest_field;
 }
 
 export {find_closest_color};

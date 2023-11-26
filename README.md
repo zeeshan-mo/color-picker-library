@@ -7,4 +7,10 @@ The colors.json file was derived from a project that scraped color names and RGB
 
 **Usage**
 `import { find_closest_color } from "color-picker-library";`
-`console.log(find_closest_color(0, 0, 0));`
+`console.log(find_closest_color(0, 0, 0).name);`
+
+Result from find_closest_color: {
+    name: string
+    hex: string
+    rgb: [int, int, int]
+}
